@@ -1,20 +1,19 @@
 .portfolio-box .portfolio-box-caption:hover {
-	background: #337ab7;
-	opacity: .9;
-}
+  background: #337ab7;
+  opacity: .9; }
+
 .portfolio-box {
-	border: 1px solid #337ab7;
-	margin-bottom: 20px;
-	height: 268.516px;
-  overflow: hidden;
-}
-.citacao-site{
-	font-size: 0.7em;
-}
-.text-white{
-	color: #fff;
-}
+  border: 1px solid #337ab7;
+  margin-bottom: 20px;
+  height: 268.516px;
+  overflow: hidden; }
+
+.citacao-site {
+  font-size: 0.7em; }
+
+.text-white {
+  color: #fff; }
+
 .text-faded {
-	font-size: 1.4rem;
-	color: rgba(255,255,255, .9);
-}
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9); }

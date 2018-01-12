@@ -7,22 +7,10 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
-// Set the banner content
-var banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
-  ' */\n',
-  ''
-].join('');
-
 // Compiles SCSS files from /scss into /css
 gulp.task('sass', function() {
-  return gulp.src('scss/creative.scss')
+  return gulp.src(['scss/custom.scss', 'scss/creative.scss'])
     .pipe(sass())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({
       stream: true
@@ -31,7 +19,7 @@ gulp.task('sass', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
-  return gulp.src('css/creative.css')
+  return gulp.src(['css/custom.css', 'css/creative.css'])
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
@@ -41,16 +29,13 @@ gulp.task('minify-css', ['sass'], function() {
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({
       stream: true
-    }))
+    }));
 });
 
 // Minify custom JS
 gulp.task('minify-js', function() {
-  return gulp.src('js/creative.js')
+  return gulp.src(['js/creative.js','js/custom.js'])
     .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
     .pipe(rename({
       suffix: '.min'
     }))
