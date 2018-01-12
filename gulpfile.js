@@ -83,6 +83,9 @@ gulp.task('copy', function() {
   gulp.src(['node_modules/jquery.easing/*.js'])
     .pipe(gulp.dest('vendor/jquery-easing'))
 
+  gulp.src(['node_modules/echo-js/dist/echo.min.js'])
+    .pipe(gulp.dest('vendor/echo-js'))
+
   gulp.src([
       'node_modules/font-awesome/**',
       '!node_modules/font-awesome/**/*.map',

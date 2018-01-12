@@ -197,7 +197,7 @@
         <div class="row no-gutters popup-gallery">
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/actar.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/actar.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -217,7 +217,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/dlk-modas.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/dlk-modas.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -237,7 +237,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/donna-carioca.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/donna-carioca.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -257,7 +257,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/forum1.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/forum1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -277,7 +277,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/scao1.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/scao1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -297,7 +297,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/congresso1.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/congresso1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -317,7 +317,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/predial1.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/predial1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -337,7 +337,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/safesuporte1.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/safesuporte1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -357,7 +357,7 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box">
-              <img class="img-fluid" src="img/studio1.jpg" alt="">
+              <img class="img-fluid" src="img/loading.gif" data-echo="img/studio1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -423,9 +423,20 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/echo-js/echo.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <!-- <script src="js/creative.min.js"></script> -->
+    <script>
+      echo.init({
+        offset: 500,
+        throttle: 250,
+        unload: false,
+        callback: function (element, op) {
+          // console.log(element, 'has been', op + 'ed')
+        }
+      });
+    </script>
 
   </body>
 
